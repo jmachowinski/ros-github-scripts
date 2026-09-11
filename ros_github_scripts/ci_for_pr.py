@@ -563,7 +563,7 @@ def main():
             'When using --branch and --comment, you must select PRs to comment on either using '
             '--interactive or by providing them using --pulls')
 
-    if chosen_pulls:
+    if parsed.build and chosen_pulls:
         validate_pulls_target(chosen_pulls, parsed.target)
 
     # Only create a gist if we are triggering a build (not for --test-report only)
